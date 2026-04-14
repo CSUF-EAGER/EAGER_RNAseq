@@ -1,0 +1,75 @@
+---
+title: "WK2&3_Deseq2_Visualizations"
+format: html
+---
+
+1) Install and Load Libraries.
+
+```{r}
+# Install required packages (run only once if not installed)
+install.packages("tidyverse")
+install.packages("pheatmap")
+install.packages("ggrepel")
+install.packages("BiocManager")
+# Install DESeq2 from Bioconductor
+BiocManager::install("DESeq2")
+```
+
+```{r}
+library(tidyverse)
+library(DESeq2)
+library(pheatmap)
+library(ggrepel)
+```
+
+
+2) Import Your Data and Prepare Count Matrix
+
+```{r}
+
+```
+
+3) Create Metadata (coldata)
+
+```{r}
+
+```
+
+4) Build and run Deseq2 dataset
+```{r}
+# Default Deseq2 codes
+# dds <- DESeqDataSetFromMatrix(
+#  countData = count_matrix,
+#  colData = col_data,
+#  design = ~ condition
+# )
+
+# dds <- DESeq(dds)
+# res <- results(dds, contrast = c("condition", "treated", "control"))
+# res <- results(dds, contrast = c("condition", "treated", "control"))
+```
+
+5) Clean and Organize results
+```{r}
+
+```
+6) MA Plot
+```{r}
+
+```
+
+7) Convert to data frame
+```{r}
+
+```
+
+8) Preliminary Visualizations (PCA, Boxplots, Histograms and Sample to Sample Heatmap)
+```{r}
+
+```
+
+9) Main Visualizations (Volcano Plot and Coexpression + Clustering Heatmap)
+```{r}
+
+```
+

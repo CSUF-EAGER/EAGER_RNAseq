@@ -1,0 +1,58 @@
+---
+title: "WK4_Enrichment_Analysis"
+format: html
+---
+1) Install and Load Library
+```{r}
+
+```
+
+2) Import Deseq2 Results and Prep gene list
+```{r}
+
+```
+
+3) Create a gene ID map
+```{r}
+
+```
+
+Overepresentation Analysis (ORA) via GO and KEGG Database
+
+4) Use Gene Ontology (GO)
+```{r}
+
+```
+
+5) Visualizations
+```{r}
+
+```
+
+6) Use Kyoto Encyclopedia of Genes and Genomes (KEGG) Database 
+```{r}
+
+```
+
+7) Visualizations
+```{r}
+
+```
+
+Gene Set Enrichment Analysis (GSEA)
+
+8) Build ranked gene list
+```{r}
+
+```
+
+9) GO Database for GSEA
+```{r}
+
+```
+
+10) Visualizations
+```{r}
+
+```
+
