@@ -1,4 +1,4 @@
-## RNAseq Pipeline Guide
+## RNAseq Pipeline Guide (Week 1)
 This guide outlines a basic RNA-seq pipeline including trimming, alignment, and quantification.
 
 # Trimming
