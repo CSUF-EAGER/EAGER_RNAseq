@@ -47,19 +47,15 @@ conda activate <environment_name>
 For faster environment switching, you can add aliases to your .bashrc or .bash_profile:
 
 ## 4. Downloading Raw FASTQ Files and Reference Genome
-1. Create Project Directory Structure
+1. Create Project Directory Structure and symlinks to large data files pre-loaded on Kepler
 ```bash
-mkdir raw_reads trimmed_reads ref_genome fastqc hisat2 alignments counts scripts logs
+cd ~/EAGER/users/<USERNAME> #replace <USERNAME> with the name of your working folder
+mkdir RNA-seq; cd RNA-seq
+mkdir trimmed_reads fastqc hisat2 alignments counts scripts logs
+ln -s ~/EAGER/modules/rnaseq-covid/data/* .
 ```
-2. Copy Raw FASTQ Files
-```bash
-cp /full/path/to/raw_reads/*.fastq .
-```
-3. Copy Reference Genome
-```bash
-cp /full/path/to/ref_genome/*.ht2 .
-```
-4. (Optional)
+
+3. (Optional)
 For ease of downstream analysis, rename the downloaded SRR files to more descriptive sample names. Below is the mapping between the original accession IDs and their corresponding filenames
 ```bash
 SRR11517726.fastq HealthyLung_1.fastq
