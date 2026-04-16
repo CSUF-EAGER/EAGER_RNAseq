@@ -39,9 +39,14 @@ conda create -n alignment -c bioconda -c conda-forge hisat2 samtools
 #Read Counting
 conda create -n counting -c bioconda -c conda-forge htseq
 ```
-2. Activate Conda Environments. Type:
+2. To view and activate your installed Conda environments, type:
 ```bash
-conda activate <environment_name>
+# view the available environments
+conda env list
+# activate an environment (replace <environment_name> with the name of the environment you want to use
+conda activate <environment_name> 
+# when you are done with a task, deactivate it with:
+conda deactivate
 ```
 (Optional)
 For faster environment switching, you can add aliases to your .bashrc or .bash_profile:
