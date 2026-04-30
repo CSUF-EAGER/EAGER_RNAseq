@@ -1,0 +1,134 @@
+---
+title: "WK4_Enrichment_Analysis"
+format: html
+---
+1) Install and Load Library
+```{r}
+install.packages("tidyverse")
+install.packages("ggridges")
+
+BiocManager::install("clusterProfiler", update = FALSE, ask = FALSE)
+BiocManager::install("org.Hs.eg.db", update = FALSE, ask = FALSE)
+BiocManager::install("enrichplot", update = FALSE, ask = FALSE)
+BiocManager::install("fgsea", update = FALSE, ask = FALSE)
+```
+```{r}
+library(tidyverse)
+library(ggridges)
+library(clusterProfiler)
+library(org.Hs.eg.db)
+library(enrichplot)
+library(fgsea)
+```
+
+2) Import Deseq2 Results and Prepare gene list by extracting most sig DEGs
+```{r}
+
+```
+
+3) Create a gene ID map
+- Convert gene symbols to ENSEMBLE and ENTREZIDs using bitr from the CLUSTERPROFILER Package
+```{r}
+#gene_map <- bitr(DEG_SIG_LIST,           #bitr stands for biological ID translation
+#                 fromType = "",    #Input gene ID type
+#                 toType = c("", ""), # Convert to output ID type
+#                 OrgDb = )           #Organism Database
+```
+
+Overepresentation Analysis (ORA) via GO and KEGG Database
+
+4) Use Gene Ontology (GO) database
+- Most popular database that provides standardized terms to describe gene function
+- Organizes genes into a structured hierarchy (ontology) of biological concepts
+- Three main Categories: BP (Biological Process), MF (Molecular Function) and Cellular Component(CC)
+- Allow us to do functional and pathway interpretation
+```{r}
+# GO_bp <- enrichGO(gene = , #Use the input list of sig gene IDs
+#                   OrgDb = ,     # Use the Human gene annotation database
+#                   keyType = ,     # Specifies input gene ID type
+#                   ont = )               # Grab information for biological process
+# 
+
+```
+
+5) Visualizations (Dotplots, Barplots, Enrichment MAP, Gene Network MAP)
+```{r}
+#Create Dotplot and barplot
+```
+
+```{r}
+#Create Enrichment MAP
+```
+
+```{r}
+#Gene Network MAP
+```
+
+
+
+
+6) Use Kyoto Encyclopedia of Genes and Genomes (KEGG) Database 
+- A curated  database used to understand genes, proteins, and biological pathways
+- Focuses on how genes interact in functional networks and cellular processes
+- Only uses ENTREZID 
+```{r}
+# kegg <- enrichKEGG(
+#   gene = , 
+#   organism = ,
+#   pvalueCutoff =     
+# )
+
+
+
+```
+
+7) Visualizations is the same as above
+```{r}
+#Barplot and Dotplot
+```
+
+```{r}
+#Enrichment Map
+```
+
+```{r}
+#Gene Network Map
+```
+
+Gene Set Enrichment Analysis (GSEA)
+
+8) Build ranked gene list
+- Determine whether a set of genes shows consistent, coordinated changes between two biological conditions
+- All genes are ranked based on a metric (Ex. Expression Changes)
+- Produces an Enrichment Score (ES) for each gene set
+
+- GSEA required a fully ranked gene list in a named numeric vector
+
+```{r}
+# 1. Prepare fold changes
+
+
+# 2. Map SYMBOL -> ENSEMBL & ENTREZID
+
+# 3. Merge mapped IDs with fold changes
+# gene_list_df <- merge(XXX, data.frame(SYMBOL = names(YYY),  #Merge foldchange                                                                             with mapped IDs
+#                       log2FC = YYY), by = "SYMBOL") %>%
+#                 group_by(ENTREZID) %>%           #Group genes by ENTREZ ID
+#                 summarise(log2FC = max(log2FC)) %>%  # For each gene, keep the highest log2                                                       fold change value
+#                 ungroup()                     #Remove grouping strucutre to return to df
+
+
+# 4: Arrange in proper format
+```
+
+9) GO Database for GSEA
+Similar to Step 4 but now we use gseGO instead of enrichGo
+```{r}
+
+```
+
+10) Visualizations (Barplots, GGRidges, Enrichment MAP, Gene Network MAP )
+```{r}
+
+```
+
